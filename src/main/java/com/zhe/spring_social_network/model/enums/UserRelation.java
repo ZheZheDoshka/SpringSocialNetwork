@@ -1,6 +1,6 @@
 package com.zhe.spring_social_network.model.enums;
 
-public enum UserRelations {
+public enum UserRelation {
     BLOCKED,
     FRIEND,
     NEUTRAL;
