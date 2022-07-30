@@ -50,7 +50,8 @@ CREATE TABLE userProfile(
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
     user INT NOT NULL ,
     description VARCHAR(500) ,
-    photo VARCHAR(500)
+    photo VARCHAR(500) ,
+    poststory VARCHAR(500)
 );
 
 CREATE TABLE files(

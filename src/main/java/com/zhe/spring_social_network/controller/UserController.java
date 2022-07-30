@@ -49,4 +49,9 @@ public class UserController {
         userService.save(user);
         return "redirect:/home";
     }
+
+    @GetMapping("/login")
+    public String login(Model model) {
+        return "login";
+    }
 }
