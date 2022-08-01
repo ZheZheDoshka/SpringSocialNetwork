@@ -29,6 +29,12 @@ public class User {
     @Column(name="identificator")
     String identificator;
 
+    @Column(name="firstname")
+    String firstname;
+
+    @Column(name="lastname")
+    String lastname;
+
     @Column(name="email")
     String email;
 

@@ -13,6 +13,8 @@ CREATE TABLE users (
     identificator VARCHAR(64) NOT NULL UNIQUE ,
     email VARCHAR(64) NOT NULL UNIQUE,
     password VARCHAR(250) NOT NULL ,
+    firstname VARCHAR(32) NOT NULL ,
+    lastname VARCHAR(32) NOT NULL ,
     role VARCHAR(10) NOT NULL
 );
 
@@ -20,7 +22,9 @@ CREATE TABLE userRelations (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
     requester INT NOT NULL ,
     requestee INT NOT NULL ,
-    relation VARCHAR(10)
+    relation VARCHAR(10) ,
+    CONSTRAINT UserRequester FOREIGN KEY (requester) REFERENCES users (id) ON DELETE CASCADE ,
+    CONSTRAINT UserRequestee FOREIGN KEY (requestee) REFERENCES users (id) ON DELETE CASCADE
 );
 
 CREATE TABLE post (
@@ -68,3 +72,5 @@ CREATE TABLE userChat(
     user2 INT NOT NULL ,
     path VARCHAR(250)
 );
+
+INSERT INTO users VALUES (1, 'admin1610', 'admin', 'admin@admin', '$2a$12$odumr60QQXCkeA/TOhvJZ.GHC5CZO8H4BRRlZSIzrX.0OhrfDpJwO', 'admin', 'adminenko', 'ADMIN');
