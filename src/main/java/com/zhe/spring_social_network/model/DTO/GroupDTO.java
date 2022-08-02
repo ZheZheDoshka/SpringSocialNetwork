@@ -12,7 +12,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class GroupDTO {
     Long id;
-    String group_name;
-    String identificator;
+    String groupname;
+    String group_display_name;
     User group_owner;
 }

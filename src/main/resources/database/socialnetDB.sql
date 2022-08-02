@@ -1,4 +1,4 @@
-DROP TABLE users;
+
 DROP TABLE userRelations;
 DROP TABLE post;
 DROP TABLE user_group;
@@ -6,11 +6,11 @@ DROP TABLE groupRelations;
 DROP TABLE files;
 DROP TABLE userProfile;
 DROP TABLE userChat;
+DROP TABLE users;
 
 CREATE TABLE users (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
     username VARCHAR(32) NOT NULL UNIQUE ,
-    identificator VARCHAR(64) NOT NULL UNIQUE ,
     email VARCHAR(64) NOT NULL UNIQUE,
     password VARCHAR(250) NOT NULL ,
     firstname VARCHAR(32) NOT NULL ,
@@ -38,8 +38,8 @@ CREATE TABLE post (
 
 CREATE TABLE user_group (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
-    group_name VARCHAR(250) ,
-    identificator VARCHAR(64) NOT NULL UNIQUE ,
+    groupname VARCHAR(250) ,
+    group_display_name VARCHAR(250) ,
     group_owner INT NOT NULL
 );
 
@@ -73,4 +73,4 @@ CREATE TABLE userChat(
     path VARCHAR(250)
 );
 
-INSERT INTO users VALUES (1, 'admin1610', 'admin', 'admin@admin', '$2a$12$odumr60QQXCkeA/TOhvJZ.GHC5CZO8H4BRRlZSIzrX.0OhrfDpJwO', 'admin', 'adminenko', 'ADMIN');
+INSERT INTO users VALUES (1, 'admin1610', 'admin@admin', '$2a$12$odumr60QQXCkeA/TOhvJZ.GHC5CZO8H4BRRlZSIzrX.0OhrfDpJwO', 'admin', 'adminenko', 'ADMIN');

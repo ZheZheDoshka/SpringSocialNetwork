@@ -1,23 +1,18 @@
 package com.zhe.spring_social_network.model.DTO;
 
-import com.zhe.spring_social_network.model.enums.Role;
+import com.zhe.spring_social_network.model.entities.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserDTO {
-
-    Long id;
-    String username;
-    String password;
-    String firstname;
-    String lastname;
-    String email;
-    Role role;
+public class UserProfileDTO {
+    User user;
+    String description;
+    String photo;
+    String poststory;
 }

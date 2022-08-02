@@ -26,9 +26,6 @@ public class User {
     @Column(name="password")
     String password;
 
-    @Column(name="identificator")
-    String identificator;
-
     @Column(name="firstname")
     String firstname;
 

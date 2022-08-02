@@ -13,6 +13,6 @@ import lombok.Setter;
 public class Group {
     Long id;
     String group_name;
-    String identificator;
+    String group_display_name;
     User group_owner;
 }
