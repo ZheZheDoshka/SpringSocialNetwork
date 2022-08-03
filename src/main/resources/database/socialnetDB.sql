@@ -74,3 +74,4 @@ CREATE TABLE userChat(
 );
 
 INSERT INTO users VALUES (1, 'admin1610', 'admin@admin', '$2a$12$odumr60QQXCkeA/TOhvJZ.GHC5CZO8H4BRRlZSIzrX.0OhrfDpJwO', 'admin', 'adminenko', 'ADMIN');
+INSERT INTO userprofile VALUES (1, 1, 'i am admin', 'nothing', 'nothing');
